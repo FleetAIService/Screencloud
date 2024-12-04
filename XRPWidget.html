@@ -6,15 +6,31 @@
     <title>LiveCoinWatch Widget</title>
     <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1f2434;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
         .scaling-container {
-            transform: scale(1.25); /* Adjust scale: 1.5 for 150%, 2 for 200% */
-            transform-origin: top left; /* Keep the top-left alignment */
+            transform: scale(1.25); /* Adjust to 1.25, 1.4, or 1.5 as needed */
+            transform-origin: center; /* Ensure the widget centers during scaling */
             width: fit-content;
             height: fit-content;
+            overflow: hidden; /* Prevent scrolling */
+            margin: 0; /* Remove any unwanted margin */
+        }
+        .livecoinwatch-widget-1 {
+            display: block;
+            margin: 0; /* Ensure no gaps from the widget itself */
+            padding: 0;
         }
     </style>
 </head>
-<body style="margin:0; padding:0; background-color: #1f2434;">
+<body>
     <div class="scaling-container">
         <div class="livecoinwatch-widget-1" 
              lcw-coin="XRP" 
